@@ -8,11 +8,11 @@ func (g Generator) WithCase(c Case) Generator {
 	return g
 }
 
-// WithLanguage returns a new Generator for the given language code.
+// WithLanguage returns a new Generator for the given language (ISO 639-1 code).
 // Falls back to "en" if the language is unsupported.
-func (g Generator) WithLanguage(lang string) Generator {
-	if _, _, err := words.Get(lang); err != nil {
-		lang = defaultLanguage
+func (g Generator) WithLanguage(lang Language) Generator {
+	if _, _, err := words.Get(string(lang)); err != nil {
+		lang = "en"
 	}
 	g.language = lang
 	return g

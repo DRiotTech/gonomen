@@ -20,9 +20,13 @@ const (
 	SuffixAlphanumeric SuffixType = "alphanumeric" // e.g. 4a2z
 )
 
+// Language identifies a supported word-list language (ISO 639-1 code).
+// Supported values: "en", "el", "es", "it", "pl", "pt".
+type Language string
+
 // GeneratorOptions configures a Generator at creation time.
 type GeneratorOptions struct {
-	Language     string     // "en", "el", "es", "it", "pl", "pt"
+	Language     Language   // default: EN
 	Case         Case       // default: CamelCase
 	SuffixLength int        // number of suffix characters; default 4
 	SuffixType   SuffixType // default: SuffixDigits

@@ -26,8 +26,8 @@ func TestWithCaseKebab(t *testing.T) {
 }
 
 func TestWithLanguage(t *testing.T) {
-	for _, lang := range []string{"es", "it", "pl", "pt", "el"} {
-		t.Run(lang, func(t *testing.T) {
+	for _, lang := range []gonomen.Language{"es", "it", "pl", "pt", "el"} {
+		t.Run(string(lang), func(t *testing.T) {
 			g := gonomen.NewGenerator(gonomen.GeneratorOptions{}).WithLanguage(lang)
 			result := g.Generate()
 			if result == "" {

@@ -6,15 +6,12 @@ import (
 	"github.com/nerdiken/gonomen/words"
 )
 
-const (
-	defaultLanguage     = "en"
-	defaultSuffixLength = 4
-)
+const defaultSuffixLength = 4
 
 // Generator generates random usernames according to its configuration.
 // It is immutable: builder methods return a new copy.
 type Generator struct {
-	language     string
+	language     Language
 	caseFormat   Case
 	suffixLength int
 	suffixType   SuffixType
@@ -25,10 +22,10 @@ type Generator struct {
 func NewGenerator(opts GeneratorOptions) Generator {
 	lang := opts.Language
 	if lang == "" {
-		lang = defaultLanguage
+		lang = "en"
 	}
-	if _, _, err := words.Get(lang); err != nil {
-		lang = defaultLanguage
+	if _, _, err := words.Get(string(lang)); err != nil {
+		lang = "en"
 	}
 
 	c := opts.Case
@@ -56,7 +53,7 @@ func NewGenerator(opts GeneratorOptions) Generator {
 
 // Generate returns a randomly generated username.
 func (g Generator) Generate() string {
-	adjs, nouns, _ := words.Get(g.language)
+	adjs, nouns, _ := words.Get(string(g.language))
 	adj := adjs[rand.IntN(len(adjs))]
 	noun := nouns[rand.IntN(len(nouns))]
 	return format(g.caseFormat, adj, noun) + generateSuffix(g.suffixType, g.suffixLength)

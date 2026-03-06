@@ -58,9 +58,9 @@ func TestGenerateUnsupportedLanguageFallsBackToEnglish(t *testing.T) {
 }
 
 func TestGenerateAllLanguages(t *testing.T) {
-	langs := []string{"en", "el", "es", "it", "pl", "pt"}
+	langs := []gonomen.Language{"en", "el", "es", "it", "pl", "pt"}
 	for _, lang := range langs {
-		t.Run(lang, func(t *testing.T) {
+		t.Run(string(lang), func(t *testing.T) {
 			g := gonomen.NewGenerator(gonomen.GeneratorOptions{Language: lang})
 			result := g.Generate()
 			if result == "" {
