@@ -41,7 +41,7 @@ jobs:
       - name: Check linting
         uses: golangci/golangci-lint-action@v6
         with:
-          version: v1.64.8
+          version: latest
 
       - name: Run tests
         run: go test -race -covermode=atomic -coverprofile=cover.out ./...
