@@ -27,3 +27,10 @@ func TestFormat(t *testing.T) {
 		})
 	}
 }
+
+func TestCapitalizeEmpty(t *testing.T) {
+	got := capitalize("")
+	if got != "" {
+		t.Errorf("capitalize(\"\") = %q, want \"\"", got)
+	}
+}
