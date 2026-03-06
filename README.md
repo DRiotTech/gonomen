@@ -1,7 +1,7 @@
 # gonomen
 
 [![CI](https://github.com/DRiotTech/gonomen/actions/workflows/ci.yml/badge.svg)](https://github.com/DRiotTech/gonomen/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/DRiotTech/gonomen/badge.svg?branch=main)](https://coveralls.io/github/DRiotTech/gonomen?branch=main)
+[![codecov](https://codecov.io/gh/DRiotTech/gonomen/branch/main/graph/badge.svg)](https://codecov.io/gh/DRiotTech/gonomen)
 [![Go Report Card](https://goreportcard.com/badge/github.com/DRiotTech/gonomen)](https://goreportcard.com/report/github.com/DRiotTech/gonomen)
 [![Go Reference](https://pkg.go.dev/badge/github.com/DRiotTech/gonomen.svg)](https://pkg.go.dev/github.com/DRiotTech/gonomen)
 [![Go Version](https://img.shields.io/badge/go-%3E%3D1.25-00ADD8?logo=go)](go.mod)

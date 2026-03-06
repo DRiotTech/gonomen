@@ -45,12 +45,9 @@ jobs:
         run: golangci-lint run ./...
 
       - name: Run tests
-        run: go test -race -covermode=atomic -coverprofile=cover.out ./...
+        run: go test -race -covermode=atomic -coverprofile=coverage.txt ./...
 
-      - name: Install goveralls
-        run: go install github.com/mattn/goveralls@latest
-
-      - name: Send coverage
-        env:
-          COVERALLS_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: goveralls -coverprofile=cover.out -service=github
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
