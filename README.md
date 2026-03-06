@@ -1,5 +1,13 @@
 # gonomen
 
+[![CI](https://github.com/DRiotTech/gonomen/actions/workflows/ci.yml/badge.svg)](https://github.com/DRiotTech/gonomen/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/DRiotTech/gonomen/badge.svg?branch=main)](https://coveralls.io/github/DRiotTech/gonomen?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/DRiotTech/gonomen)](https://goreportcard.com/report/github.com/DRiotTech/gonomen)
+[![Go Reference](https://pkg.go.dev/badge/github.com/DRiotTech/gonomen.svg)](https://pkg.go.dev/github.com/DRiotTech/gonomen)
+[![Go Version](https://img.shields.io/badge/go-%3E%3D1.25-00ADD8?logo=go)](go.mod)
+[![Repo Size](https://img.shields.io/github/repo-size/DRiotTech/gonomen)](https://github.com/DRiotTech/gonomen)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A Go library for generating readable, multilingual usernames — like `HappyRiver4821` or `feliz-luna9k3`.
 
 Combines a random adjective and noun from a curated word list, formats them in your preferred casing style, and appends an optional suffix. Zero external dependencies.
@@ -7,13 +15,13 @@ Combines a random adjective and noun from a curated word list, formats them in y
 ## Install
 
 ```sh
-go get github.com/nerdiken/gonomen
+go get github.com/DRiotTech/gonomen
 ```
 
 ## Quick start
 
 ```go
-import "github.com/nerdiken/gonomen"
+import "github.com/DRiotTech/gonomen"
 
 // Defaults: English, CamelCase, 4-digit suffix
 g := gonomen.NewGenerator(gonomen.GeneratorOptions{})

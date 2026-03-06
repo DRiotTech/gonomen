@@ -3,7 +3,7 @@ package gonomen_test
 import (
 	"testing"
 
-	"github.com/nerdiken/gonomen"
+	"github.com/DRiotTech/gonomen"
 )
 
 func TestCaseConstants(t *testing.T) {

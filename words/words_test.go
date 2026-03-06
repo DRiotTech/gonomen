@@ -3,7 +3,7 @@ package words_test
 import (
 	"testing"
 
-	"github.com/nerdiken/gonomen/words"
+	"github.com/DRiotTech/gonomen/words"
 )
 
 func TestGetEnglish(t *testing.T) {

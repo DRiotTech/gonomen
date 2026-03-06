@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nerdiken/gonomen"
+	"github.com/DRiotTech/gonomen"
 )
 
 func TestNewGeneratorDefaults(t *testing.T) {

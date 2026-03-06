@@ -1,3 +1,3 @@
-module github.com/nerdiken/gonomen
+module github.com/DRiotTech/gonomen
 
 go 1.25.4

@@ -1,6 +1,6 @@
 package gonomen
 
-import "github.com/nerdiken/gonomen/words"
+import "github.com/DRiotTech/gonomen/words"
 
 // WithCase returns a new Generator with the given case format.
 func (g Generator) WithCase(c Case) Generator {

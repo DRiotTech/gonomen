@@ -3,7 +3,7 @@ package gonomen
 import (
 	"math/rand/v2"
 
-	"github.com/nerdiken/gonomen/words"
+	"github.com/DRiotTech/gonomen/words"
 )
 
 const defaultSuffixLength = 4
